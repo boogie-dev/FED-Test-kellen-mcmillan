@@ -2,8 +2,8 @@
 
 ## Requirements
 - Create a public repository on GitHub
-- Recreate the [comp](public/comp.png) using HTML/CSS/Javascript
-- Make a request to the json endpoint (`./public/data.json`) and populate the list
+- Recreate the [comp](https://chalharb.github.io/Digital-Engagement-FED-Test/assets/comp.png) using HTML/CSS/Javascript
+- Make a request to the [json endpoint](https://chalharb.github.io/Digital-Engagement-FED-Test/assets/data.json) and populate the list
   - links should have `href="#"`
 - When you select a letter, the terms will be filtered to only terms that begin with that letter
 - Your solution must be responsive and [accessible](https://www.w3.org/TR/WCAG21/)
