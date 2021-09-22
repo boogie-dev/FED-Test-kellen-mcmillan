@@ -1,7 +1,7 @@
 # Digital Engagement Front End Developer Test
 
 ## Requirements
-- Create a public repository on GitHub
+- Fork this repository on GitHub
 - Recreate the [comp](https://chalharb.github.io/Digital-Engagement-FED-Test/assets/comp.png) using HTML/CSS/Javascript
 - Make a request to the [json endpoint](https://chalharb.github.io/Digital-Engagement-FED-Test/assets/data.json) and populate the list
   - links should have `href="#"`
