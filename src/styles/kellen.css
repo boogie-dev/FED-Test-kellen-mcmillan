@@ -143,13 +143,15 @@ header {
 }
 .header .menu.mobile {
   display: none;
+  color: #f1f2f3;
+  margin: 16px;
 }
 /* Header */
 
 /* Appointment */
 .appointments {
   background: #f1f2f3;
-  height: 80px;
+  min-height: 80px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -163,8 +165,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  max-height: 80px;
+  min-height: 80px;
   margin: 0;
   padding: 0 16px;
   width: 100%;
@@ -484,26 +485,17 @@ footer address {
 /* Media Queries */
 
 /* ----------- Non-Retina Screens ----------- */
-
-/* mobile */
-@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+/* Extra Large Screens*/
+@media screen and (max-width: 1600px) {
 }
-
-/* Tablets */
-@media screen and (min-device-width: 481px) and (max-device-width: 768px) {
+/* Large Desktops */
+@media screen and (max-width: 1200px) {
   footer .container .footer-content {
     flex: 100%;
   }
-  .letter-query .letter-holder span {
-    align-items: flex-start;
-  }
-  .main-content .directory a {
-    flex: 100%;
-  }
 }
-
 /* Small Laptops */
-@media screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .header nav {
     display: none;
   }
@@ -511,36 +503,32 @@ footer address {
     display: flex;
   }
 }
-
-/* Large Desktops */
-@media screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .letter-query .letter-holder div {
+    justify-content: flex-start;
+  }
+  .main-content .directory a {
+    flex: 100%;
+  }
 }
-
-/* Extra Large Screens*/
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+/* mobile */
+@media screen and (max-width: 480px) {
 }
 
 /* ----------- Retina Screens ----------- */
 
-/* mobile */
-@media screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+/* Extra Large Screens*/
+@media screen and (max-width: 1600px) and (min-resolution: 192dpi) {
 }
-
-/* Tablets */
-@media screen and (min-device-width: 481px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+/* Large Desktops */
+@media screen and (max-width: 1200px) and (min-resolution: 192dpi) {
   footer .container .footer-content {
     flex: 100%;
   }
-  .letter-query .letter-holder span {
-    align-items: flex-start;
-  }
-  .main-content .directory a {
-    flex: 100%;
-  }
 }
-
 /* Small Laptops */
-@media screen and (min-device-width: 769px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+@media screen and (max-width: 1024px) and (min-resolution: 192dpi) {
   .header nav {
     display: none;
   }
@@ -548,14 +536,16 @@ footer address {
     display: flex;
   }
 }
-
-/* Large Desktops */
-@media screen and (min-device-width: 1025px) and (max-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+/* Tablets */
+@media screen and (max-width: 768px) and (min-resolution: 192dpi) {
+  .letter-query .letter-holder div {
+    justify-content: flex-start;
+  }
+  .main-content .directory a {
+    flex: 100%;
+  }
 }
-
-/* Extra Large Screens*/
-
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+/* mobile */
+@media screen and (max-width: 480px) and (min-resolution: 192dpi) {
 }
-
 /* Media Queries */
