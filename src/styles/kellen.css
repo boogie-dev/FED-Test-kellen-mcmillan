@@ -492,6 +492,7 @@ footer .footer-content .icons-container {
 footer .footer-content .icons-container img {
   max-width: 24px;
   max-height: 24px;
+  padding: 4px;
 }
 /* Footer */
 /* Media Queries */
