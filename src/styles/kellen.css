@@ -111,7 +111,7 @@
   display: none !important;
 }
 .greyedOut {
-  color: #212121 !important;
+  color: #BDBDBD !important;
 }
 .shadow {
   box-shadow: 0 3px 5px -1px #bdbdbd, 0 6px 10px 0 #bdbdbd, 0 1px 18px 0 #bdbdbd;
@@ -169,7 +169,8 @@ header {
   margin: 0;
 }
 
-.header .logo-container {
+.header .logo-container,
+.footer-content .logo-container {
   display: flex;
 }
 
@@ -411,6 +412,7 @@ header {
   font-size: 32px;
   color: #212121;
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 .letter-query .letter-holder div {
   display: flex;
@@ -435,7 +437,7 @@ header {
 
 /* Directory */
 .main-content {
-  background: #eeeeee;
+  background: #E0E0E0;
   min-height: 600px;
   display: flex;
   flex-direction: row;
@@ -444,7 +446,7 @@ header {
   align-items: center;
 }
 
-.main-content div {
+.main-content div.shadow {
   background: transparent;
   min-height: 600px;
   display: flex;
@@ -455,6 +457,7 @@ header {
   width: 60%;
   border-radius: 5px;
   margin: 32px;
+  background-color: #f1f2f3;
 }
 
 .main-content .directory {
@@ -504,3 +507,74 @@ header {
   color: #212121 !important;
 }
 /* Directory */
+
+/* Footer */
+footer {
+  background: #f1f2f3;
+  min-height: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+footer .container {
+  min-height: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 60%;
+}
+footer .container .footer-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 33%;
+}
+.footer-content ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.footer-content .logo {
+  flex-basis: auto;
+  max-height: 48px;
+  width: auto;
+  margin: 16px 0 16px 0;
+}
+.footer-content .logo.text {
+  display: flex;
+  color: #0a2240;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 26px 0 16px 0;
+}
+.footer-content p {
+  color: #212121;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.footer-content a {
+  display: flex;
+  margin-bottom: 16px;
+  text-decoration: underline !important;
+  text-decoration-color: #212121;
+}
+.footer-content a li {
+  list-style-type: none;
+  color: #212121;
+  font-size: 18px;
+}
+footer address {
+  display: flex;
+  color: #212121;
+  font-size: 18px;
+  font-style: normal !important;
+}
+/* Footer */
