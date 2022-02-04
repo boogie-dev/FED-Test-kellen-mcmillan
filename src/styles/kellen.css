@@ -4,101 +4,75 @@
 
 /* mobile */
 @media screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) {
-  .header {
-    height: 40px;
-    max-height: 40px;
-  }
-  .header .logo {
-    margin: 0 8px;
-  }
 }
 
 /* Tablets */
 @media screen and (min-device-width: 481px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
-  .header {
+  footer .container .footer-content {
+    flex: 100%;
   }
-  .header .logo {
+  .letter-query .letter-holder span {
+    align-items: flex-start;
+  }
+  .main-content .directory a {
+    flex: 100%;
   }
 }
 
 /* Small Laptops */
 @media screen and (min-device-width: 769px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  .header {
-    height: 48px;
-    max-height: 48px;
+  .header nav {
+    display: none;
   }
-  .header .logo {
-    margin: 0 12px;
+  .header .menu.mobile {
+    display: flex;
   }
 }
 
 /* Large Desktops */
 @media screen and (min-device-width: 1025px) and (max-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
-  .header {
-  }
-  .header .logo {
-  }
 }
 
 /* Extra Large Screens*/
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-  .header {
-  }
-  .header .logo {
-  }
 }
 
 /* ----------- Retina Screens ----------- */
 
 /* mobile */
 @media screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  .header {
-    height: 40px;
-    max-height: 40px;
-  }
-  .header .logo {
-    margin: 0 8px;
-  }
 }
 
 /* Tablets */
 @media screen and (min-device-width: 481px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  .header {
+  footer .container .footer-content {
+    flex: 100%;
   }
-  .header .logo {
+  .letter-query .letter-holder span {
+    align-items: flex-start;
+  }
+  .main-content .directory a {
+    flex: 100%;
   }
 }
 
 /* Small Laptops */
 @media screen and (min-device-width: 769px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  .header {
-    height: 48px;
-    max-height: 48px;
+  .header nav {
+    display: none;
   }
-  .header .logo {
-    margin: 0 12px;
-  }
-  .header nav li a {
-    font-size: 12px;
-    cursor: pointer;
+  .header .menu.mobile {
+    display: flex;
   }
 }
 
 /* Large Desktops */
 @media screen and (min-device-width: 1025px) and (max-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  .header {
-  }
-  .header .logo {
-  }
 }
 
 /* Extra Large Screens*/
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  .header {
-  }
-  .header .logo {
-  }
 }
 
 /* Media Queries */
@@ -106,6 +80,9 @@
 /* Global */
 * {
   transition: all 0.5s ease-out;
+}
+.flex {
+  display: flex;
 }
 .hidden {
   display: none !important;
@@ -170,6 +147,7 @@ header {
 }
 
 .header .logo-container,
+.header .header-link,
 .footer-content .logo-container {
   display: flex;
 }
@@ -241,6 +219,9 @@ header {
   top: 0;
   border-radius: 5px;
   background: #f1f2f3;
+}
+.header .menu.mobile {
+  display: none;
 }
 /* Header */
 
@@ -484,11 +465,11 @@ header {
 }
 
 .main-content .directory h4:after {
-  content: ''; /* This is necessary for the pseudo element to work. */
-  display: block; /* This will put the pseudo element on its own line. */
-  width: 80px; /* Change this to whatever width you want. */
-  padding-top: 4px; /* This creates some space between the element and the border. */
-  border-bottom: 4px solid #212121; /* This creates the border. Replace black with whatever color you want. */
+  content: '';
+  display: block;
+  width: 80px;
+  padding-top: 4px;
+  border-bottom: 4px solid #212121;
 }
 
 .main-content .directory a {
