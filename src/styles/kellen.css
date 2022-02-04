@@ -51,6 +51,9 @@ select:focus {
 /* Global */
 
 /* Header */
+body {
+  overflow-x: hidden;
+}
 header {
   position: sticky;
   top: 0;
@@ -480,6 +483,15 @@ footer address {
   color: #212121;
   font-size: 18px;
   font-style: normal !important;
+}
+footer .footer-content .icons-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+footer .footer-content .icons-container img {
+  max-width: 24px;
+  max-height: 24px;
 }
 /* Footer */
 /* Media Queries */
