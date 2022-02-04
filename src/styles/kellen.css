@@ -1,4 +1,3 @@
-
 /* Global */
 * {
   transition: all 0.5s ease-out;
@@ -487,11 +486,11 @@ footer address {
 /* ----------- Non-Retina Screens ----------- */
 
 /* mobile */
-@media screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
 }
 
 /* Tablets */
-@media screen and (min-device-width: 481px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) {
   footer .container .footer-content {
     flex: 100%;
   }
@@ -504,7 +503,7 @@ footer address {
 }
 
 /* Small Laptops */
-@media screen and (min-device-width: 769px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-device-width: 769px) and (max-device-width: 1024px) {
   .header nav {
     display: none;
   }
@@ -514,11 +513,11 @@ footer address {
 }
 
 /* Large Desktops */
-@media screen and (min-device-width: 1025px) and (max-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
 }
 
 /* Extra Large Screens*/
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
 }
 
 /* ----------- Retina Screens ----------- */
