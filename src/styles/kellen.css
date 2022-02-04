@@ -111,7 +111,7 @@
   display: none !important;
 }
 .greyedOut {
-  color: #BDBDBD !important;
+  color: #bdbdbd !important;
 }
 .shadow {
   box-shadow: 0 3px 5px -1px #bdbdbd, 0 6px 10px 0 #bdbdbd, 0 1px 18px 0 #bdbdbd;
@@ -437,7 +437,7 @@ header {
 
 /* Directory */
 .main-content {
-  background: #E0E0E0;
+  background: #e0e0e0;
   min-height: 600px;
   display: flex;
   flex-direction: row;
@@ -517,6 +517,7 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding-top: 16px;
 }
 footer .container {
   min-height: 300px;
