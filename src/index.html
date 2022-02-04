@@ -11,12 +11,53 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <div class="mobile-menu hidden shadow">
+      <div class="container">
+        <div class="close-mobile">
+          <span class="material-icons closeThis">close</span>
+        </div>
+        <li>
+          <span><a class="nostyle" href="#">Home</a></span>
+        </li>
+        <li>
+          <span><a class="nostyle" href="#">My Health Resources</a></span>
+        </li>
+        <li>
+          <span><a class="nostyle" href="#">Specialties</a></span>
+        </li>
+        <li>
+          <span><a class="nostyle" href="#">Locations</a></span>
+        </li>
+        <li>
+          <span><a class="nostyle" href="#">Patients & Visitors</a></span>
+        </li>
+        <li>
+          <span><a class="nostyle" href="#">Careers</a></span>
+        </li>
+        <li>
+          <span><a class="nostyle" href="#">About Us</a></span>
+        </li>
+        <li>
+          <span><a class="nostyle" href="#">Find A Doctor</a></span>
+        </li>
+        <li>
+          <span><a class="nostyle" href="#">Manage Your Account</a></span>
+        </li>
+        <li>
+          <span><a class="nostyle" href="#">MyHealthZone</a></span>
+        </li>
+        <li>
+          <span><a class="nostyle" href="#">...</a></span>
+        </li>
+      </div>
+    </div>
     <header>
       <div class="header">
+        <div class="menu mobile open-mobile">
+          <span class="material-icons openThis">menu</span>
+        </div>
+        &nbsp;&nbsp;
         <a class="nostyle header-link" href="/">
-          <div class="menu mobile">
-            <span class="material-icons">menu</span>
-          </div>
           <span class="logo-container">
             <span><img class="logo" src="assets/hca-logo.png" /></span>
             <span>

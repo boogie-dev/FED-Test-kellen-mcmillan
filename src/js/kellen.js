@@ -321,6 +321,12 @@ const switchAndPrint = (item) => {
   }
   return true
 }
+document.querySelector('.openThis').onclick = () => {
+  document.querySelector('.mobile-menu').classList.remove('hidden')
+}
+document.querySelector('.closeThis').onclick = () => {
+  document.querySelector('.mobile-menu').classList.add('hidden')
+}
 fetch('./assets/data.json')
   .then((response) => {
     return response.json()
@@ -328,7 +334,6 @@ fetch('./assets/data.json')
   .then((data) => {
     Object.fromEntries(
       Object.entries(data.termList).map((list) => {
-        console.log('My items ', list[1])
         return switchAndPrint(list[1])
       })
     )
