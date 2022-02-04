@@ -78,6 +78,10 @@
   .header .logo {
     margin: 0 12px;
   }
+  .header nav li a {
+    font-size: 12px;
+    cursor: pointer;
+  }
 }
 
 /* Large Desktops */
@@ -100,38 +104,403 @@
 /* Media Queries */
 
 /* Global */
+* {
+  transition: all 0.5s ease-out;
+}
+.hidden {
+  display: none !important;
+}
+.greyedOut {
+  color: #212121 !important;
+}
+.shadow {
+  box-shadow: 0 3px 5px -1px #bdbdbd, 0 6px 10px 0 #bdbdbd, 0 1px 18px 0 #bdbdbd;
+}
 a.nostyle:visited {
   text-decoration: inherit;
   color: inherit;
-  cursor: auto;
+  cursor: pointer;
 }
 a.nostyle:link {
   text-decoration: inherit;
   color: inherit;
-  cursor: auto;
+  cursor: pointer;
+}
+a:hover {
+  color: #bdbdbd !important;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  max-height: 48px;
+  margin: 0;
+  padding: 0 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button:hover {
+  box-shadow: 0 3px 5px -1px #bdbdbd, 0 6px 10px 0 #bdbdbd, 0 1px 18px 0 #bdbdbd;
 }
 /* Global */
 
 /* Header */
+header {
+  position: sticky;
+  top: 0;
+}
 .header {
   background-color: #0a2240;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   height: 64px;
   max-height: 64px;
   margin: 0;
 }
+
+.header .logo-container {
+  display: flex;
+}
+
 .header .logo {
   flex-basis: auto;
   max-height: 24px;
   width: auto;
-  margin: 0 16px;
+  margin: 0 0 0 16px;
 }
-.header nav a {
-  color: #f1f2f3;
+
+.header .logo.text {
   flex-basis: auto;
+  color: #f1f2f3;
+  font-size: 22px;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.header nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav .home {
+  margin-right: 32px;
+}
+
+.header nav li {
+  text-decoration: none;
+  list-style-type: none;
+  color: #f1f2f3;
+  display: flex;
+  flex-basis: auto;
+  min-width: fit-content;
+  margin: 0 8px;
+  height: 24px;
+}
+.header nav li a {
+  flex-basis: auto;
+  font-size: 16px;
+  cursor: pointer;
+}
+.header nav li a .material-icons {
+  color: #f1f2f3;
+}
+.header .search {
+  flex-basis: auto;
+  background: #f1f2f3;
+  border-radius: 5px;
+  padding: 8px;
+  position: relative;
+  margin-right: 16px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header .search input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  top: 0;
+  border-radius: 5px;
+  background: #f1f2f3;
 }
 /* Header */
+
+/* Appointment */
+.appointments {
+  background: #f1f2f3;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appointments .alerts-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  max-height: 80px;
+  margin: 0;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.appointments .select {
+  flex-basis: auto;
+  height: 24px;
+  background: transparent;
+  padding: 8px;
+  width: 216px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.appointments p {
+  margin: 0;
+}
+
+.appointments .buttons-container {
+  flex-basis: auto;
+  height: 48px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.appointments .button.primary {
+  background-color: #0a2240;
+  color: #f1f2f3;
+  margin-right: 16px;
+}
+
+.appointments .button.alert {
+  background-color: #ef9a9a;
+  color: #212121;
+}
+
+.appointments .button.alert .warning {
+  color: #e53935;
+}
+.appointments .button.alert .alerts {
+  background-color: #f1f2f3;
+  padding: 4px;
+  border-radius: 50%;
+  color: #e53935;
+}
+/* Appointment */
+
+/* Sub Header */
+.sub-header {
+  background: #063d7a;
+  min-height: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-header .banner-query {
+  width: 60%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-header .banner-query .data {
+  display: flex;
+  color: #f1f2f3;
+  font-size: 24px;
+  flex-wrap: wrap;
+  width: 248px;
+}
+
+.sub-header .banner-query .data h2 {
+  letter-spacing: 3px;
+  margin: 16px 0;
+}
+
+.sub-header .banner-query .data p a {
+  color: #f1f2f3;
+  font-size: 18px;
+}
+
+.sub-header .search {
+  flex-basis: auto;
+  background: #f1f2f3;
+  border-radius: 5px;
+  padding: 8px;
+  width: 248px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sub-header .search input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  top: 0;
+  border-radius: 5px;
+  background: #f1f2f3;
+  font-size: 16px;
+}
+
+.sub-header .search .material-icons {
+  color: #212121;
+  border-left-width: 1px;
+  border-left-color: rgba(0, 0, 0, 0.15);
+}
+/* Sub Header */
+
+/* Query By Leter*/
+.letter-query {
+  background: #f1f2f3;
+  min-height: 160px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.letter-query .letter-holder {
+  min-height: 160px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+.letter-query .letter-holder h4 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4px;
+  flex: 100%;
+  font-size: 32px;
+  color: #212121;
+  margin-bottom: 8px;
+}
+.letter-query .letter-holder div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.letter-query .letter-holder span {
+  display: flex;
+  align-items: center;
+  color: #2196f3;
+  font-size: 24px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+.letter-query .letter-holder span:hover {
+  color: #2196f3 !important;
+}
+/* Query By Leter*/
+
+/* Directory */
+.main-content {
+  background: #eeeeee;
+  min-height: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content div {
+  background: transparent;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  border-radius: 5px;
+  margin: 32px;
+}
+
+.main-content .directory {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.main-content .directory h4 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 48px;
+  padding-bottom: 4px;
+  flex: 100%;
+  font-size: 32px;
+  color: #212121;
+  margin-bottom: 8px;
+}
+
+.main-content .directory h4:after {
+  content: ''; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  width: 80px; /* Change this to whatever width you want. */
+  padding-top: 4px; /* This creates some space between the element and the border. */
+  border-bottom: 4px solid #212121; /* This creates the border. Replace black with whatever color you want. */
+}
+
+.main-content .directory a {
+  padding: 8px 0;
+  flex: 50%;
+  text-align: start;
+}
+
+.main-content .directory li {
+  list-style-type: none;
+  color: #2196f3;
+  font-size: 24px;
+}
+
+.main-content .directory li:hover {
+  color: #212121 !important;
+}
+/* Directory */

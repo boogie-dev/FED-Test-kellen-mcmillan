@@ -1,6 +1,7 @@
 import 'normalize.css'
 import './styles/kellen.css'
 import './styles/app.scss'
+import '../public/data.json'
 import './js/kellen'
 
 const path = require('path')
