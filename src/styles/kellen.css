@@ -8,7 +8,13 @@
 .hidden {
   display: none !important;
 }
+.tempHidden {
+  display: none !important;
+}
 .greyedOut {
+  color: #bdbdbd !important;
+}
+.tempGreyedOut {
   color: #bdbdbd !important;
 }
 .shadow {
