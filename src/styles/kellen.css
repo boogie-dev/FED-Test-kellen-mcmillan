@@ -129,7 +129,7 @@ header {
   flex-basis: auto;
   max-height: 24px;
   width: auto;
-  margin: 0 0 0 16px;
+  margin: 0 16px 0 16px;
 }
 
 .header .logo.text {
@@ -558,7 +558,7 @@ footer .footer-content .icons-container img {
   }
 }
 /* Large Desktops */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1367px) {
   .header {
     justify-content: flex-start;
   }
@@ -620,7 +620,7 @@ footer .footer-content .icons-container img {
   }
 }
 /* Large Desktops */
-@media screen and (max-width: 1200px) and (min-resolution: 192dpi) {
+@media screen and (max-width: 1367px) and (min-resolution: 192dpi) {
   .header {
     justify-content: flex-start;
   }
