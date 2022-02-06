@@ -339,3 +339,99 @@ fetch('./assets/data.json')
     )
     return true
   })
+function filterize(e) {
+  console.log('attribute', e, typeof e)
+  if (e === 'hash') {
+    if (document.querySelector('ul.shown')) {
+      document.querySelector('ul.shown').classList.remove('shown')
+    }
+  } else {
+    if (document.querySelector('ul.shown')) {
+      document.querySelector('ul.shown').classList.remove('shown')
+    }
+    console.log('id', `#content${e.toUpperCase()}`)
+    document.querySelector(`#content${e.toUpperCase()}`).classList.add('shown')
+  }
+}
+
+document.getElementById('a').onclick = () => {
+  return filterize('a')
+}
+document.getElementById('b').onclick = () => {
+  return filterize('b')
+}
+document.getElementById('c').onclick = () => {
+  return filterize('c')
+}
+document.getElementById('d').onclick = () => {
+  return filterize('d')
+}
+document.getElementById('e').onclick = () => {
+  return filterize('e')
+}
+document.getElementById('f').onclick = () => {
+  return filterize('f')
+}
+document.getElementById('g').onclick = () => {
+  return filterize('g')
+}
+document.getElementById('h').onclick = () => {
+  return filterize('h')
+}
+document.getElementById('i').onclick = () => {
+  return filterize('i')
+}
+document.getElementById('j').onclick = () => {
+  return filterize('j')
+}
+document.getElementById('k').onclick = () => {
+  return filterize('k')
+}
+document.getElementById('l').onclick = () => {
+  return filterize('l')
+}
+document.getElementById('m').onclick = () => {
+  return filterize('m')
+}
+document.getElementById('n').onclick = () => {
+  return filterize('n')
+}
+document.getElementById('o').onclick = () => {
+  return filterize('o')
+}
+document.getElementById('p').onclick = () => {
+  return filterize('p')
+}
+document.getElementById('q').onclick = () => {
+  return filterize('q')
+}
+document.getElementById('r').onclick = () => {
+  return filterize('r')
+}
+document.getElementById('s').onclick = () => {
+  return filterize('s')
+}
+document.getElementById('t').onclick = () => {
+  return filterize('t')
+}
+document.getElementById('u').onclick = () => {
+  return filterize('u')
+}
+document.getElementById('v').onclick = () => {
+  return filterize('v')
+}
+document.getElementById('w').onclick = () => {
+  return filterize('w')
+}
+document.getElementById('x').onclick = () => {
+  return filterize('x')
+}
+document.getElementById('y').onclick = () => {
+  return filterize('y')
+}
+document.getElementById('z').onclick = () => {
+  return filterize('z')
+}
+document.getElementById('hash').onclick = () => {
+  return filterize('hash')
+}

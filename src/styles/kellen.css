@@ -55,7 +55,7 @@ select:focus {
   box-shadow: 0 3px 5px -1px #bdbdbd, 0 6px 10px 0 #bdbdbd, 0 1px 18px 0 #bdbdbd;
 }
 .mobile-menu {
-  height: 75vh;
+  height: fit-content;
   margin-top: 84px;
   position: absolute;
   top: 0;
@@ -137,7 +137,7 @@ header {
   color: #f1f2f3;
   font-size: 22px;
   font-weight: lighter;
-  margin: 0;
+  margin: 0 16px 0 0;
 }
 
 .header nav ul {
@@ -453,6 +453,10 @@ header {
   text-align: start;
 }
 
+.main-content ul.directory.shown ~ ul:not(.hidden) {
+  display: none;
+}
+
 .main-content .directory li {
   list-style-type: none;
   color: #2196f3;
@@ -567,6 +571,7 @@ footer .footer-content .icons-container img {
   }
   .header .logo.text {
     margin: 0.67em 0;
+    margin-right: 16px;
   }
   .header nav {
     display: none;
@@ -629,6 +634,7 @@ footer .footer-content .icons-container img {
   }
   .header .logo.text {
     margin: 0.67em 0;
+    margin-right: 16px;
   }
   .header nav {
     display: none;
