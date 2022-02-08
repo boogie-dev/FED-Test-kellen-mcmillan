@@ -26,19 +26,25 @@ function filterize(e) {
 }
 function filterThis(identifier) {
   if (identifier === 'hash') {
-    ;[].map.call(document.querySelectorAll('ul.directory:not(.hidden'), (element) => {
-      element.classList.remove('tempHidden')
-    })
-  } else {
-    const ID = identifier.toUpperCase()
-    ;[].map.call(document.querySelectorAll('ul.directory:not(.hidden'), (element) => {
-      console.log('element', ID, element.getAttribute('id'))
-      if (element.getAttribute('id') !== `content${ID}`) {
-        element.classList.add('tempHidden')
-      } else {
+    ;[].map.call(
+      document.querySelectorAll('ul.directory:not(.hidden'),
+      (element) => {
         element.classList.remove('tempHidden')
       }
-    })
+    )
+  } else {
+    const ID = identifier.toUpperCase()
+    ;[].map.call(
+      document.querySelectorAll('ul.directory:not(.hidden'),
+      (element) => {
+        console.log('element', ID, element.getAttribute('id'))
+        if (element.getAttribute('id') !== `content${ID}`) {
+          element.classList.add('tempHidden')
+        } else {
+          element.classList.remove('tempHidden')
+        }
+      }
+    )
   }
 }
 const attachListerner = (id) => {
