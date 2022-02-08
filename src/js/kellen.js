@@ -24,11 +24,30 @@ function filterize(e) {
     document.querySelector(`#content${e.toUpperCase()}`).classList.add('shown')
   }
 }
+function filterThis(identifier) {
+  if (identifier === 'hash') {
+    ;[].map.call(document.querySelectorAll('ul:not(.hidden'), (element) => {
+      element.classList.remove('tempHidden')
+    })
+  } else {
+    const ID = identifier.toUpperCase()
+    ;[].map.call(document.querySelectorAll('ul:not(.hidden'), (element) => {
+      console.log('element', ID, element.getAttribute('id'))
+      if (element.getAttribute('id') !== `content${ID}`) {
+        element.classList.add('tempHidden')
+      } else {
+        element.classList.remove('tempHidden')
+      }
+    })
+  }
+}
 const attachListerner = (id) => {
   document.getElementById(id).onclick = () => {
+    filterThis(id)
     filterize(id)
   }
 }
+attachListerner('hash')
 const switchAndPrint = (item) => {
   const ele = item.title
   switch (ele.length !== 0) {
@@ -163,7 +182,6 @@ const switchAndPrint = (item) => {
       break
     }
     default: {
-      attachListerner('hash')
       return null
     }
   }
