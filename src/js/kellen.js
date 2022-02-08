@@ -21,7 +21,6 @@ function filterize(e) {
     if (document.querySelector('ul.shown')) {
       document.querySelector('ul.shown').classList.remove('shown')
     }
-    console.log('id', `#content${e.toUpperCase()}`)
     document.querySelector(`#content${e.toUpperCase()}`).classList.add('shown')
   }
 }
@@ -164,6 +163,7 @@ const switchAndPrint = (item) => {
       break
     }
     default: {
+      attachListerner('hash')
       return null
     }
   }
