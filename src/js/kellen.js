@@ -11,19 +11,6 @@ const dryUp = (element, id) => {
   listParent.appendChild(anchor)
   anchor.appendChild(node)
 }
-function filterize(e) {
-  console.log('attribute', e, typeof e)
-  if (e === 'hash') {
-    if (document.querySelector('ul.shown')) {
-      document.querySelector('ul.shown').classList.remove('shown')
-    }
-  } else {
-    if (document.querySelector('ul.shown')) {
-      document.querySelector('ul.shown').classList.remove('shown')
-    }
-    document.querySelector(`#content${e.toUpperCase()}`).classList.add('shown')
-  }
-}
 function filterThis(identifier) {
   if (identifier === 'hash') {
     ;[].map.call(
@@ -37,7 +24,6 @@ function filterThis(identifier) {
     ;[].map.call(
       document.querySelectorAll('ul.directory:not(.hidden'),
       (element) => {
-        console.log('element', ID, element.getAttribute('id'))
         if (element.getAttribute('id') !== `content${ID}`) {
           element.classList.add('tempHidden')
         } else {
@@ -50,7 +36,6 @@ function filterThis(identifier) {
 const attachListerner = (id) => {
   document.getElementById(id).onclick = () => {
     filterThis(id)
-    filterize(id)
   }
 }
 attachListerner('hash')
