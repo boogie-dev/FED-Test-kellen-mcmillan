@@ -1,16 +1,20 @@
-const dryUp = (element, id) => {
+// Renders directory elements
+const renderElement = (element, id) => {
   const node = document.createElement('li')
   const anchor = document.createElement('a')
   const listParent = document.getElementById(`content${element[0]}`)
   const alphabetLetter = document.getElementById(id)
+  const hash = document.getElementById('hash')
   listParent.classList.remove('hidden')
   alphabetLetter.classList.remove('greyedOut')
+  hash.classList.remove('greyedOut')
   node.innerText = element
   anchor.setAttribute('href', '#')
   anchor.setAttribute('class', 'nostyle')
   listParent.appendChild(anchor)
   anchor.appendChild(node)
 }
+// Filters directory entries
 function filterThis(identifier) {
   if (identifier === 'hash') {
     ;[].map.call(
@@ -33,142 +37,147 @@ function filterThis(identifier) {
     )
   }
 }
+// Attaches click event listener to filter directory by letter
 const attachListerner = (id) => {
   document.getElementById(id).onclick = () => {
     filterThis(id)
   }
 }
+// Attaches click event listener to special hash filter character
 attachListerner('hash')
+
+// sorts imported JSON data and
+// renders list items based off of first letter
 const switchAndPrint = (item) => {
   const ele = item.title
   switch (ele.length !== 0) {
     case ele[0] === 'A': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'B': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'C': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'D': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'E': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'F': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'G': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'H': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'I': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'J': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'K': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'L': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'M': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'N': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'O': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'P': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'Q': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'R': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'S': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'T': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'U': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'V': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'W': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'X': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'Y': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
     case ele[0] === 'Z': {
-      dryUp(ele, ele[0].toLowerCase())
+      renderElement(ele, ele[0].toLowerCase())
       attachListerner(ele[0].toLowerCase())
       break
     }
@@ -178,12 +187,14 @@ const switchAndPrint = (item) => {
   }
   return true
 }
+// mobile menu event handler
 document.querySelector('.openThis').onclick = () => {
   document.querySelector('.mobile-menu').classList.remove('hidden')
 }
 document.querySelector('.closeThis').onclick = () => {
   document.querySelector('.mobile-menu').classList.add('hidden')
 }
+// fetches data from a file
 fetch('./assets/data.json')
   .then((response) => {
     return response.json()
